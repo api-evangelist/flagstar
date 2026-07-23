@@ -1,0 +1,49 @@
+aid: flagstar
+url: https://raw.githubusercontent.com/api-evangelist/flagstar/refs/heads/main/apis.yml
+name: Flagstar
+kind: company
+description: >-
+  Flagstar Bank, N.A. is the OCC-chartered national bank subsidiary of Flagstar
+  Financial, Inc. (NYSE: FLG), the Hicksville, New York holding company formerly
+  known as New York Community Bancorp (NYCB). It is one of the largest regional
+  (super-regional) banks in the United States, formed when NYCB acquired Flagstar
+  Bancorp in December 2022, converted Flagstar Bank, FSB into a national bank
+  (Flagstar Bank, N.A.), and subsequently acquired certain assets and liabilities
+  of Signature Bridge Bank from the FDIC in March 2023; the holding company
+  rebranded to Flagstar Financial in October 2024. Flagstar operates in retail
+  and commercial banking, mortgage origination and servicing, and warehouse
+  lending. On the API front, Flagstar runs a first-party developer portal at
+  developer.flagstar.com (a Broadcom/Layer7 "LivePortal" API Developer Portal),
+  but as of this review it publishes no public, self-serve API products, API
+  documentation, or downloadable OpenAPI/Swagger to anonymous visitors — all
+  products are sign-in gated behind partner/consumer-team access. Flagstar has
+  no publicly documented FDX (Financial Data Exchange) participation or CFPB
+  Section 1033 data-access posture; consumer-permissioned data sharing appears
+  to be available only through third-party aggregators (e.g. Plaid, Tink,
+  TrueLayer) rather than a first-party public API.
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+tags:
+- Financial Services
+- Banking
+- United States
+- National Bank
+- Super-Regional Bank
+- Mortgage
+- Open Finance
+- Data Aggregation
+created: '2026-07-23'
+modified: '2026-07-23'
+specificationVersion: '0.19'
+apis: []
+common:
+- type: Website
+  url: https://www.flagstar.com
+- type: DeveloperPortal
+  url: https://developer.flagstar.com
+- type: LinkedIn
+  url: https://www.linkedin.com/company/flagstar-bank
+- type: PrivacyPolicy
+  url: https://www.flagstar.com/legal-disclaimers/privacy.html
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com

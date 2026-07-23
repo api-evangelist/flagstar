@@ -1,0 +1,74 @@
+aid: flagstar
+name: Flagstar
+review:
+  question: Does Flagstar expose a public, self-serve first-party API or downloadable OpenAPI, and what is its US open-finance posture (FDX / CFPB 1033 / aggregator)?
+  answer: false
+  date: '2026-07-23'
+  reviewer: API Evangelist
+findings:
+  summary: |
+    Flagstar Bank, N.A. (subsidiary of Flagstar Financial, Inc., NYSE: FLG,
+    formerly New York Community Bancorp) operates a real first-party developer
+    portal at https://developer.flagstar.com. The portal is live (HTTP 200) and
+    is a Broadcom/Layer7 "LivePortal" API Developer Portal (org "flagstar", site
+    id "flagstar-production", served via istio-envoy). It presents "Products"
+    and "Sign In" navigation. However, the portal exposes NO public API surface
+    to anonymous visitors: the public product-catalog endpoint
+    /portals/api/sites/flagstar-production/liveportal/apis returns success with
+    empty arrays (apiDocs: [], apiProducts: [], apiCategoryList: []). All API
+    products are gated behind authentication (the "portal.consumer_teams"
+    feature is enabled). No public API documentation, API reference, or
+    downloadable OpenAPI/Swagger is available without an account. There is no
+    publicly documented FDX (Financial Data Exchange) participation and no
+    published CFPB Section 1033 data-access posture. Consumer-permissioned data
+    sharing appears to be available only via third-party aggregators (Plaid,
+    Tink, TrueLayer per Open Banking Tracker), not a first-party public API.
+    This is an honest identity-plus-gated-portal record: a confirmed developer
+    portal, but no public/first-party API surface to harvest.
+  portalConfirmed: true
+  developerPortal: https://developer.flagstar.com
+  portalPlatform: Broadcom/Layer7 API Developer Portal (LivePortal)
+  publicApiProducts: 0
+  authModel: Gated sign-in (partner / consumer-team access); no anonymous API products. Underlying API auth model not publicly documented (typical Layer7 portal issues API keys / OAuth2 client credentials to approved developers).
+  openapiHarvested: false
+  specProvenance: none
+  fdxParticipant: false
+  section1033Posture: none-published
+  aggregatorAccess:
+    - Plaid
+    - Tink
+    - TrueLayer
+  transports:
+    - protocol: REST
+      scheme: https
+      note: Developer portal front-end and its LivePortal management API are HTTPS REST, but no public downstream API products are published to anonymous users.
+      documented: partial
+  charter:
+    institution: Flagstar Bank, N.A.
+    charterType: National bank (OCC-chartered National Association; converted from Flagstar Bank, FSB)
+    holdingCompany: Flagstar Financial, Inc. (NYSE FLG; formerly New York Community Bancorp / NYCB)
+    headquarters: Hicksville, New York, United States
+    tier: super-regional
+    notes: Formed via NYCB acquisition of Flagstar Bancorp (Dec 2022) and acquisition of certain Signature Bridge Bank assets/liabilities from the FDIC (Mar 2023); holding company rebranded to Flagstar Financial in Oct 2024.
+sources:
+  - url: https://developer.flagstar.com
+    type: DeveloperPortal
+    note: Live (HTTP 200) Broadcom/Layer7 LivePortal developer portal; presents Products and Sign In menus.
+  - url: https://developer.flagstar.com/portals/api/sites/flagstar-production/liveportal/apis
+    type: APIReference
+    note: Public product-catalog endpoint returns success with empty apiDocs/apiProducts/apiCategoryList — no public API products.
+  - url: https://www.openbankingtracker.com/provider/flagstar-bank-n-a-us
+    type: Reference
+    note: No API products listed for Flagstar Bank, N.A.; recommends aggregators (Plaid, Tink, TrueLayer) for connectivity.
+  - url: https://www.flagstar.com
+    type: Website
+    note: Corporate/retail banking site (returns 403 to non-browser clients due to bot protection; canonical public site).
+actions:
+  apisYmlUpdated: true
+  reason: |
+    A first-party developer portal exists and was confirmed live, but it
+    publishes no public API products, documentation, or downloadable OpenAPI to
+    anonymous visitors. No API entries were fabricated; apis[] is left empty and
+    the confirmed developer portal is recorded in common[] as DeveloperPortal.
+    No FDX/1033 posture and no first-party public data-access API; aggregator
+    access noted honestly.
