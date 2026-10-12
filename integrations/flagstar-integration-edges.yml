@@ -1,0 +1,16 @@
+generated: '2026-10-12'
+method: none
+source:
+- https://zapier.com/apps/flagstar/integrations
+- https://n8n.io/integrations/flagstar/
+- https://composio.dev/toolkits/flagstar
+- https://monid.ai/tools/flagstar
+checked:
+- https://composio.dev/toolkits/flagstar
+- https://monid.ai/tools/flagstar
+- https://n8n.io/integrations/flagstar/
+- https://zapier.com/apps/flagstar/integrations
+summary: null
+marketplace_apps: []
+edges: []
+templates: []
