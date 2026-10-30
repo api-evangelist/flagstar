@@ -1,4 +1,4 @@
-# Flagstar (flagstar)
+# Flagstar
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,45 +64,80 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Flagstar Bank, N.A. is the OCC-chartered national bank subsidiary of Flagstar Financial, Inc. (NYSE: FLG), the Hicksville, New York holding company formerly known as New York Community Bancorp (NYCB). It is one of the largest regional (super-regional) banks in the United States. Flagstar runs a first-party developer portal at developer.flagstar.com, but as of this review it publishes no public, self-serve API products, documentation, or downloadable OpenAPI specs to anonymous visitors — all products are sign-in gated.
+Flagstar Bank, N.A. is the OCC-chartered national bank subsidiary of Flagstar Financial, Inc. (NYSE: FLG), the Hicksville, New York holding company formerly known as New York Community Bancorp (NYCB). It is one of the largest regional (super-regional) banks in the United States, formed when NYCB acquired Flagstar Bancorp in December 2022, converted Flagstar Bank, FSB into a national bank (Flagstar Bank, N.A.), and subsequently acquired certain assets and liabilities of Signature Bridge Bank from the FDIC in March 2023; the holding company rebranded to Flagstar Financial in October 2024. Flagstar operates in retail and commercial banking, mortgage origination and servicing, and warehouse lending. On the API front, Flagstar runs a first-party developer portal at developer.flagstar.com (a Broadcom/Layer7 "LivePortal" API Developer Portal), but as of this review it publishes no public, self-serve API products, API documentation, or downloadable OpenAPI/Swagger to anonymous visitors — all products are sign-in gated behind partner/consumer-team access. Flagstar has no publicly documented FDX (Financial Data Exchange) participation or CFPB Section 1033 data-access posture; consumer-permissioned data sharing appears to be available only through third-party aggregators (e.g. Plaid, Tink, TrueLayer) rather than a first-party public API.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/flagstar/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/flagstar/refs/heads/main/apis.yml)
+**Areas:** Financial Services · Banking · United States · National Bank · Super-Regional Bank · Mortgage · Open Finance
 
-## Tags
+## Flagstar on APIs.io
 
-- Financial Services
-- Banking
-- United States
-- National Bank
-- Super-Regional Bank
-- Mortgage
-- Open Finance
-- Data Aggregation
+Everything profiled for Flagstar is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/flagstar/](https://apis.io/providers/flagstar/)** — or go straight to one of the APIs or properties below.
 
-## Timestamps
+### Published properties
 
-- **Created:** 2026-07-23
-- **Modified:** 2026-07-23
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## APIs
+#### Security (1)
 
-No public, self-serve APIs are documented. Flagstar operates a first-party developer portal (a Broadcom/Layer7 "LivePortal" API Developer Portal) at [developer.flagstar.com](https://developer.flagstar.com), which returns HTTP 200 and presents "Products" and "Sign In" navigation. However, its public API-product catalog endpoint returns an empty set (`apiDocs: []`, `apiProducts: []`, `apiCategoryList: []`) — every product is gated behind authentication (partner/consumer-team access). No downloadable OpenAPI/Swagger is publicly available.
+Authentication, trust centre, and vulnerability disclosure.
 
-### Open-finance posture
+- [Flagstar Domain Security](https://apis.io/security/flagstar/flagstar-domain-security/)
 
-- **First-party public API:** None. Developer portal exists but exposes zero public API products or specs to anonymous visitors.
-- **FDX (Financial Data Exchange):** No publicly documented participation.
-- **CFPB Section 1033:** No publicly documented data-access posture.
-- **Aggregator access:** Consumer-permissioned data appears to be available only through third-party aggregators (e.g. Plaid, Tink, TrueLayer), not a first-party public API.
+## Where to find this API
 
-## Common Properties
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
 - [Website](https://www.flagstar.com)
-- [Developer Portal](https://developer.flagstar.com)
-- [LinkedIn](https://www.linkedin.com/company/flagstar-bank)
-- [Privacy Policy](https://www.flagstar.com/legal-disclaimers/privacy.html)
+- [Privacy policy](https://www.flagstar.com/legal-disclaimers/privacy.html)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 6.4** — minimal · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 48.2 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 0.0 |
+| Developer ergonomics | 0.0 |
+| Access clarity | 17.1 |
+
+**Agent readiness 0.0** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 7.9** — Banking & Open Finance
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/flagstar/](https://apis.io/providers/flagstar/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Flagstar: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/flagstar/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
